@@ -15,7 +15,7 @@ docker build -t deepface:gpu .
 
 # run image
 #docker run --net="host" deepface
-docker run --gpus all --net="host" deepface:gpu
+docker run --gpus all -v $PWD/data:/root --net="host" deepface:gpu
 
 # to access the inside of docker image when it is in running status
 # docker exec -it <CONTAINER_ID> /bin/sh
